@@ -7,8 +7,9 @@ import { TaskList } from '../../model/task-list';
   styleUrls: ['./todo-list.component.scss'],
 })
 export class TodoListComponent implements DoCheck {
-  public taskList: Array<TaskList> = JSON.parse(localStorage.getItem("taskList")
-  || '[]');
+  public taskList: Array<TaskList> = JSON.parse(
+    localStorage.getItem('taskList') || '[]'
+  );
 
   public deleteItemFromTaskList(event: number): void {
     this.taskList.splice(event, 1);
